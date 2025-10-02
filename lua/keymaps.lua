@@ -8,7 +8,7 @@ local opts = {
 }
 
 -- 设置 leader 键
-vim.g.mapleader = ' '
+vim.g.mapleader = ','
 vim.g.maplocalleader = ','
 
 -----------------

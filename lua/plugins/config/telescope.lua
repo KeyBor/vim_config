@@ -28,12 +28,7 @@ function M.setup()
     },
   })
 
-    -- 当前文件的函数
-    vim.keymap.set("n", "<leader>ff", function()
-      builtin.lsp_document_symbols({
-        symbols = { "function", "method" }
-      })
-    end, { desc = "Find Functions" })
+    vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
     
     -- 当前文件的所有符号（类、函数、变量等）
     vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols, { desc = "Find Symbols" })

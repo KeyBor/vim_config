@@ -10,7 +10,12 @@ cmp.setup({
       luasnip.lsp_expand(args.body)
     end,
   },
+  -- 禁用自动补全
+  completion = {
+    autocomplete = false
+  },
   mapping = cmp.mapping.preset.insert({
+    [",,"] = cmp.mapping.complete(),
     ["<C-b>"] = cmp.mapping.scroll_docs(-4),
     ["<C-f>"] = cmp.mapping.scroll_docs(4),
     ["<C-Space>"] = cmp.mapping.complete(),
