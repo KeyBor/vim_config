@@ -141,6 +141,15 @@ local plugins = {
     end,
   },
 
+  {
+    "nvim-telescope/telescope.nvim",
+    tag = "0.1.5",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+	    require("plugins.config.telescope").setup()
+    end,
+  },
+  
   -- === 快速注释 ===
   {
     "numToStr/Comment.nvim",
